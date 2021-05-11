@@ -56,4 +56,9 @@ public class WebController {
         mascotaBDService.guardarMascota(mascota);
         return "Mascota guardada";
     }
+
+    @GetMapping("/listar")
+    public String listarMascotas() {
+        return mascotaBDService.obtenerMascotas().toString();
+    }
 }

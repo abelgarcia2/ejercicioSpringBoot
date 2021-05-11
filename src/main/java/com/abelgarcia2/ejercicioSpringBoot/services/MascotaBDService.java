@@ -1,5 +1,7 @@
 package com.abelgarcia2.ejercicioSpringBoot.services;
 
+import java.util.ArrayList;
+
 import com.abelgarcia2.ejercicioSpringBoot.models.MascotaModel;
 import com.abelgarcia2.ejercicioSpringBoot.repositories.MascotaRepository;
 
@@ -14,5 +16,9 @@ public class MascotaBDService {
 
     public MascotaModel guardarMascota(MascotaModel mascota) {
         return mascotaRepository.save(mascota);
+    }
+
+    public ArrayList<MascotaModel> obtenerMascotas() {
+        return (ArrayList<MascotaModel>) mascotaRepository.findAll();
     }
 }
