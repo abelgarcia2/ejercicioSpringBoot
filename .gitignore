@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+src/main/java/com/abelgarcia2/ejercicioSpringBoot/controllers/Prueba.java
