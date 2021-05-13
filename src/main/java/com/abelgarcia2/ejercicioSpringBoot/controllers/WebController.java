@@ -2,6 +2,7 @@ package com.abelgarcia2.ejercicioSpringBoot.controllers;
 
 import com.abelgarcia2.ejercicioSpringBoot.models.MascotaModel;
 import com.abelgarcia2.ejercicioSpringBoot.services.MascotaBDService;
+import com.abelgarcia2.ejercicioSpringBoot.services.TranslatedService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,9 @@ public class WebController {
 
     @Autowired
     MascotaBDService mascotaBDService;
+
+    @Autowired
+    TranslatedService translatedService;
 
     @GetMapping("/contar/{palabra}")
     public String contarConsonantesVocales(@PathVariable String palabra) {
@@ -60,5 +64,11 @@ public class WebController {
     @GetMapping("/listar")
     public String listarMascotas() {
         return mascotaBDService.obtenerMascotas().toString();
+    }
+
+    @GetMapping("/traduce/{palabra}")
+    public String traduce(@PathVariable String palabra) {
+        String traduccion = translatedService.traduce(palabra);
+        return traduccion;
     }
 }
