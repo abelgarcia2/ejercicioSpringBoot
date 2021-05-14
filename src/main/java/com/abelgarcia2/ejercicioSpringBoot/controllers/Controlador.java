@@ -1,12 +1,20 @@
 package com.abelgarcia2.ejercicioSpringBoot.controllers;
 
+import com.abelgarcia2.ejercicioSpringBoot.models.MascotaModel;
+import com.abelgarcia2.ejercicioSpringBoot.services.MascotaBDService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class Controlador {
+
+    @Autowired
+    MascotaBDService mascotaBDService;
 
     @RequestMapping("/contar/{palabra}")
     public String contarConsonantesVocales(@PathVariable String palabra, Model modelo) {
@@ -25,5 +33,20 @@ public class Controlador {
             modelo.addAttribute("vocales", vocales);
         }
         return "contar";
+    }
+
+    @RequestMapping("/guarda")
+    public String getDato(@RequestParam int id, @RequestParam String nombre, @RequestParam String raza,
+            @RequestParam int edad, @RequestParam boolean vacunado, Model modelo) {
+        MascotaModel mascota = new MascotaModel();
+        mascota.setId(id);
+        mascota.setNombre(nombre);
+        mascota.setRaza(raza);
+        mascota.setEdad(edad);
+        mascota.setVacunado(vacunado);
+        mascotaBDService.guardarMascota(mascota);
+        modelo.addAttribute("nombre", nombre);
+        modelo.addAttribute("id", id);
+        return "guarda";
     }
 }
