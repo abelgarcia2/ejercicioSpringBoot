@@ -2,6 +2,7 @@ package com.abelgarcia2.ejercicioSpringBoot.controllers;
 
 import com.abelgarcia2.ejercicioSpringBoot.models.MascotaModel;
 import com.abelgarcia2.ejercicioSpringBoot.services.MascotaBDService;
+import com.abelgarcia2.ejercicioSpringBoot.services.TranslatedService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,10 @@ public class Controlador {
 
     @Autowired
     MascotaBDService mascotaBDService;
+
+
+    @Autowired
+    TranslatedService translatedService;
 
     @RequestMapping("/contar/{palabra}")
     public String contarConsonantesVocales(@PathVariable String palabra, Model modelo) {
@@ -63,5 +68,13 @@ public class Controlador {
         modelo.addAttribute("palabra", palabra);
         modelo.addAttribute("resultado", salida);
         return "eliminarVocales";
+    }
+
+    @RequestMapping("/traduce/{palabra}")
+    public String traduce(@PathVariable String palabra, Model modelo) {
+        String traduccion = translatedService.traduce(palabra);
+        modelo.addAttribute("palabra", palabra);
+        modelo.addAttribute("traduccion", traduccion);
+        return "traduce";
     }
 }
