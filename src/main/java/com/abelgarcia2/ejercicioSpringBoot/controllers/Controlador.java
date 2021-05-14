@@ -77,4 +77,11 @@ public class Controlador {
         modelo.addAttribute("traduccion", traduccion);
         return "traduce";
     }
+
+    @RequestMapping("/listar")
+    public String listarMascotas(Model modelo) {
+        String salida = mascotaBDService.obtenerMascotas().toString();
+        modelo.addAttribute("salida", salida);
+        return "lista";
+    }
 }
