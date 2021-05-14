@@ -62,8 +62,7 @@ public class MascotaModel {
 
     @Override
     public String toString() {
-        return "MascotaModel [edad=" + edad + ", id=" + id + ", nombre=" + nombre + ", raza=" + raza + ", vacunado="
-                + vacunado + "]";
+        return "( ID= "+id+", Nombre= "+nombre+", Raza= "+raza+", Edad= "+edad+", Vacunado= "+vacunado+" )";
     }
 
 }
