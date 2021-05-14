@@ -32,19 +32,6 @@ public class WebController {
         return salida;
     }
 
-    @GetMapping("/guarda")
-    public String getDato(@RequestParam int id, @RequestParam String nombre, @RequestParam String raza,
-            @RequestParam int edad, @RequestParam boolean vacunado) {
-        MascotaModel mascota = new MascotaModel();
-        mascota.setId(id);
-        mascota.setNombre(nombre);
-        mascota.setRaza(raza);
-        mascota.setEdad(edad);
-        mascota.setVacunado(vacunado);
-        mascotaBDService.guardarMascota(mascota);
-        return "Mascota guardada";
-    }
-
     @GetMapping("/listar")
     public String listarMascotas() {
         return mascotaBDService.obtenerMascotas().toString();
