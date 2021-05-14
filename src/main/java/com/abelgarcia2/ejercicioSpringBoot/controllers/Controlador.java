@@ -49,4 +49,19 @@ public class Controlador {
         modelo.addAttribute("id", id);
         return "guarda";
     }
+
+    @RequestMapping("/{palabra}")
+    public String eliminarVocales(@PathVariable String palabra, Model modelo) {
+        char[] troceada = palabra.toCharArray();
+        String salida = "";
+        for (char a : troceada) {
+            if (a != 'a' && a != 'e' && a != 'i' && a != 'o' && a != 'u' && a != 'A' && a != 'E' && a != 'I' && a != 'O'
+                    && a != 'U') {
+                salida += a;
+            }
+        }
+        modelo.addAttribute("palabra", palabra);
+        modelo.addAttribute("resultado", salida);
+        return "eliminarVocales";
+    }
 }
