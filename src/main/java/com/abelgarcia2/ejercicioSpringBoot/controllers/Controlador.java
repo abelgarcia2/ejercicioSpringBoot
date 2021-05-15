@@ -55,6 +55,10 @@ public class Controlador {
         return "guarda";
     }
 
+    @RequestMapping("/formulario")
+    public String formulario(){
+        return "formulario";
+    }
     @RequestMapping("/{palabra}")
     public String eliminarVocales(@PathVariable String palabra, Model modelo) {
         char[] troceada = palabra.toCharArray();
