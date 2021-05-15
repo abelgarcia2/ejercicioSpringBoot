@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Mascota</title>
+</head>
+
+<body>
+    <h1>Guardar Mascota</h1>
+    <form action="/guarda" method="GET">
+        <label for="id">ID:</label>
+        <input type="number" name="id">
+        <br />
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre">
+        <br />
+        <label for="raza">Raza:</label>
+        <input type="text" name="raza">
+        <br />
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad">
+        <br />
+        <label for="vacunado">Vacunado:</label>
+        <input type="radio" name="vacunado" id="true" value="true"><label for="true">SI</label>
+        <input type="radio" name="vacunado" id="false" value="false"><label for="true">NO</label>
+        <br />
+        <input type="submit" value="Insertar Mascota">
+    </form>
+    <a href="/">Inicio</a>
+</body>
+
+</html>
