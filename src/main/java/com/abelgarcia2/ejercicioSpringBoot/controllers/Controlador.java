@@ -52,7 +52,7 @@ public class Controlador {
         mascotaBDService.guardarMascota(mascota);
         modelo.addAttribute("nombre", nombre);
         modelo.addAttribute("id", id);
-        return "guarda";
+        return "guardado";
     }
 
     @RequestMapping("/formulario")
