@@ -79,7 +79,7 @@ public class Controlador {
         String traduccion = translatedService.traduce(palabra);
         modelo.addAttribute("palabra", palabra);
         modelo.addAttribute("traduccion", traduccion);
-        return "traduce";
+        return "traducido";
     }
 
     @RequestMapping("/listar")
