@@ -3,22 +3,86 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Inicio</title>
 </head>
 
 <body>
+    <main role="main">
 
-    <h1>Inicio</h1>
-    <a href="/contar/Windsurf">Contar vocales y consonantes</a><br />
-    <a href="/Ventana">Eliminar vocales</a><br />
-    <a href="/listar">Listar Mascotas</a><br />
-    <a href="/formulario">Añadir Mascota</a><br />
-    <a href="/traduce/Hola">Traductor</a><br />
+        <!--Cabecera del album
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1>Imagenes de Galicia</h1>
+                <p class="lead text-muted">En las fotografías de abajo verás los lugares más recomendados para visitar
+                    en este
+                    verano 2021 sin salir de la comunidad</p>
+                <p>
+                    <a href="https://www.skyscanner.es/vuelos-a/vgo/vuelos-baratos-a-vigo-aeropuerto.html"
+                        target="_blank" class="btn btn-info my-2">Buscar vuelo</a>
+                    <a href="https://www.booking.com/searchresults.es.html?label=gen173rf-1FCAEoggI46AdIClgDaEaIAQGYAQq4ARfIAQ_YAQHoAQH4AQKIAgGiAg4xMjcuMC4wLjE6NTUwMKgCA7gCyZWqhAbAAgHSAiRmY2ZhNDlkNi04YWRlLTQ1NjktODljYi1hZGZlZWFkNjEwYTbYAgXgAgE&sid=286dd7cb4ccf34111bd9a5dc62a69433&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.es.html%3Flabel%3Dgen173rf-1FCAEoggI46AdIClgDaEaIAQGYAQq4ARfIAQ_YAQHoAQH4AQKIAgGiAg4xMjcuMC4wLjE6NTUwMKgCA7gCyZWqhAbAAgHSAiRmY2ZhNDlkNi04YWRlLTQ1NjktODljYi1hZGZlZWFkNjEwYTbYAgXgAgE%3Bsid%3D286dd7cb4ccf34111bd9a5dc62a69433%3Bsb_price_type%3Dtotal%26%3B&ss=Galicia%2C+Espa%C3%B1a&is_ski_area=&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&search_pageview_id=eb0e49e4dbe30022&ac_suggestion_list_length=5&ac_suggestion_theme_list_length=0&ac_position=0&ac_langcode=es&ac_click_type=b&dest_id=735&dest_type=region&place_id_lat=42.759297&place_id_lon=-8.416342&search_pageview_id=eb0e49e4dbe30022&search_selected=true&region_type=province&ss_raw=Gal"
+                        target="_blank" class="btn btn-secondary my-2">Buscar hotel</a>
+                </p>
+            </div>
+        </section>
+    -->
 
-    <p>En las opciones de contar y eliminar vocales y en el traductor puedes cambiar la palabra con la que trabajan desde la barra de direcciones</p>
+        <!--Trabajaremos aquí para cambiar el aspecto del album-->
+        <div class="container">
 
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Esta opcion cuenta las vocales y consonantes de la palabra que pongas
+                                después de ../contar/ en la url</p>
+                                <div class="btn btn-primary">Cuenta</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Desde aquí puedes acceder a un formulario para guardar a tu mascota en
+                                nuestra base de datos
+                            </p>
+                                <div class="btn btn-primary">Guardar</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Haciendo click en el botón podrás consultar todas las mascotas que
+                                figuran en nuestra base de datos
+                            </p>
+                            <div class="btn btn-primary">Ver</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Esta opción sirve para eliminar las vocales de la palabra que escribas
+                                despues de ../
+                            </p>
+                            <div class="btn btn-primary">Eliminar vocales</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Esta funcionalidad traduce la palabra o frase que escribas
+                                después de ../traduce/
+                            </p>
+                            <div class="btn btn-primary">Traduce</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
