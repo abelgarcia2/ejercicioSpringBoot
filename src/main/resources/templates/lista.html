@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Listar</title>
 </head>
-<body>
-    <h1>Mascotas guardadas</h1>
-    <p>La lista de las mascotas guardadas es: </p>
-    <p th:text="${salida}"></p>
-    <a href="/">Inicio</a>
-</body>
-</html>
 
-<!-- <span th:text="${salida}"></span> -->
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-secondary shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img src="../static/engranajes.svg" alt="engranajes">
+                    <strong>SpringBoot</strong>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Mascotas guardadas</h1>
+            <p>La lista de las mascotas guardadas es: </p>
+            <p th:text="${salida}"></p>
+            <a class="btn btn-info" href="/">Inicio</a>
+        </div>
+    </main>
+</body>
+
+</html>
