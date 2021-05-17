@@ -10,12 +10,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Mascotas guardadas</h1>
-        <p>La lista de las mascotas guardadas es: </p>
-        <p th:text="${salida}"></p>
-        <a href="/">Inicio</a>
-    </div>
+    <header>
+        <div class="navbar navbar-dark bg-secondary shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img src="../static/engranajes.svg" alt="engranajes">
+                    <strong>SpringBoot</strong>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Mascotas guardadas</h1>
+            <p>La lista de las mascotas guardadas es: </p>
+            <p th:text="${salida}"></p>
+            <a class="btn btn-info" href="/">Inicio</a>
+        </div>
+    </main>
 </body>
 
 </html>
